@@ -1,0 +1,6 @@
+ALTERAÇÕES NO CÓDIGO DA IA:
+1º. Aumentei a fonte do Título;
+2º. Alterei o padding-bottom do Título;
+3º. Alterei a cor do border do Título;
+4º. Aumentei o height da imagem destaque;
+5º. Alterei os tempos da transição da imagem destaque.

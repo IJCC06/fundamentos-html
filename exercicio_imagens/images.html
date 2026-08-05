@@ -35,17 +35,45 @@
     body {
         background-color: lightgrey;
     }
+
+    /* ===== ÚNICAS ADIÇÕES FEITAS ===== */
+    .div-images a {
+        display: block;           /* vira um container de tamanho fixo */
+        width: 30%;               /* mesma largura que a imagem tinha */
+        height: 250px;            /* mesma altura que a imagem tinha */
+        border-radius: 10px;      /* mantém as bordas arredondadas */
+        overflow: hidden;         /* recorta a imagem dentro do arredondamento */
+    }
+
+    .div-images a img {
+        width: 100%;              /* ocupa todo o espaço do link */
+        height: 100%;             /* ocupa todo o espaço do link */
+        object-fit: cover;        /* mantém a proporção sem esticar */
+        border-radius: 0;         /* o arredondamento fica por conta do <a> */
+    }
+    /* ================================= */
 </style>
 
 <body>
     <div>
-        <img class="img-destaque" src="F1.jpg" alt="Imagem do personagem Yang Kai de Martial Peak">
+        <a target="_blank" href="https://www.youtube.com/shorts/LuuacRqWnSw">
+            <img class="img-destaque" src="F1.jpg" alt="Imagem do personagem Yang Kai de Martial Peak">
+        </a>
     </div>
 
     <div class="div-images">
-        <img class="img-pequena" src="F3.jpeg" alt="Imagem do personagem Arthur Leywin de The Beggining After the End">
-        <img class="img-pequena" src="F2.jpeg" alt="Imagem do personagem Kim Dokja de Omnicient Reader's Viewpoint">
-        <img class="img-pequena" src="F4.jpeg" alt="Imagem do personagem Kim Gong-Ja de SSS-Class Revival Hunter">
+        <a target="_blank" href="https://www.youtube.com/watch?v=GYo8x_zC7nU&pp=ygUSZWRpdCBhcnRodXIgbGV5d2lu">
+            <img class="img-pequena" src="F3.jpeg" alt="Imagem do personagem Arthur Leywin de The Beggining After the End">
+        </a>
+
+        <a target="_blank" href="https://www.youtube.com/shorts/VlRivB7aJQo">
+            <img class="img-pequena" src="F2.jpeg" alt="Imagem do personagem Kim Dokja de Omnicient Reader's Viewpoint">
+        </a>
+
+        <a target="_blank" href="https://www.youtube.com/shorts/yWM9Yer1-Ms">
+            <img class="img-pequena" src="F4.jpeg" alt="Imagem do personagem Kim Gong-Ja de SSS-Class Revival Hunter">
+        </a>
     </div>
 </body>
+
 </html>
