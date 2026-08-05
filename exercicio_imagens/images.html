@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+</head>
+
+<style>
+    .img-pequena {
+        width: 30%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .img-destaque {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .div-images {
+        margin-top: 30px;
+        border: 2px solid white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    body {
+        background-color: lightgrey;
+    }
+</style>
+
+<body>
+    <div>
+        <img class="img-destaque" src="F1.jpg" alt="Imagem do personagem Yang Kai de Martial Peak">
+    </div>
+
+    <div class="div-images">
+        <img class="img-pequena" src="F3.jpeg" alt="Imagem do personagem Arthur Leywin de The Beggining After the End">
+        <img class="img-pequena" src="F2.jpeg" alt="Imagem do personagem Kim Dokja de Omnicient Reader's Viewpoint">
+        <img class="img-pequena" src="F4.jpeg" alt="Imagem do personagem Kim Gong-Ja de SSS-Class Revival Hunter">
+    </div>
+</body>
+</html>

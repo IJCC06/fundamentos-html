@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria de Personagens</title>
+    <meta name="description" content="Galeria de imagens de personagens de obras literárias" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f0f0f0 0%, #d9d9d9 100%);
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        .gallery {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            border-radius: 24px;
+            padding: 2rem 2rem 2.5rem;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .gallery:hover {
+            box-shadow: 0 28px 56px -16px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ===== TÍTULO ===== */
+        .gallery-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #1e1e2a;
+            margin-bottom: 1.75rem;
+            border-bottom: 3px solid #b0b0c0;
+            padding-bottom: 0.75rem;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            display: table;
+        }
+
+        /* ===== IMAGEM DESTAQUE ===== */
+        .hero-image {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            display: block;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.01);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ===== THUMBNAILS ===== */
+        .thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .thumbnails figure {
+            flex: 1 1 200px;
+            min-width: 140px;
+            max-width: 280px;
+            margin: 0;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .thumbnails figure:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        .thumbnails figure img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: filter 0.3s ease;
+        }
+
+        .thumbnails figure:hover img {
+            filter: brightness(1.04) saturate(1.06);
+        }
+
+        .thumbnails figcaption {
+            padding: 0.75rem 0.5rem 0.65rem;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1e1e2a;
+            background: #ffffff;
+            letter-spacing: 0.2px;
+            border-top: 1px solid #ececf0;
+        }
+
+        .thumbnails figcaption small {
+            display: block;
+            font-weight: 400;
+            font-size: 0.7rem;
+            color: #6b6b7a;
+            margin-top: 0.2rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            .gallery {
+                padding: 1.25rem 1rem 1.75rem;
+                border-radius: 18px;
+            }
+
+            .gallery-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .hero-image {
+                height: 220px;
+                border-radius: 12px;
+            }
+
+            .thumbnails {
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .thumbnails figure {
+                flex: 1 1 140px;
+                min-width: 100px;
+                max-width: 200px;
+            }
+
+            .thumbnails figure img {
+                height: 150px;
+            }
+
+            .thumbnails figcaption {
+                font-size: 0.75rem;
+                padding: 0.5rem 0.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-image {
+                height: 170px;
+            }
+
+            .thumbnails figure {
+                flex: 1 1 120px;
+                min-width: 80px;
+            }
+
+            .thumbnails figure img {
+                height: 120px;
+            }
+
+            .gallery-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* ===== ACESSIBILIDADE: foco visível ===== */
+        .thumbnails figure:focus-visible {
+            outline: 3px solid #2d2d8a;
+            outline-offset: 3px;
+            border-radius: 16px;
+        }
+
+        /* ===== TOUCH & INTERAÇÃO ===== */
+        @media (hover: none) {
+            .thumbnails figure:hover {
+                transform: none;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            }
+
+            .thumbnails figure:hover img {
+                filter: none;
+            }
+
+            .hero-image:hover {
+                transform: none;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        /* Estilo geral das miniaturas */
+        .thumbnails figure img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: filter 0.3s ease;
+        }
+        
+        /* Classe específica para o Kim Gong-Ja - foco no rosto (parte superior) */
+        .img-kim {
+            object-position: 50% 15%; /* ajuste a % vertical (0% = topo, 100% = base) */
+        }
+    </style>
+</head>
+
+<body>
+    <main class="gallery">
+
+        <h1 class="gallery-title">✦ Galeria de Personagens ✦</h1>
+
+        <!-- Imagem em destaque -->
+        <figure>
+            <img
+            class="hero-image"
+            src="F1.jpg"
+            alt="Yang Kai, protagonista de Martial Peak, com expressão determinada e postura imponente"
+            loading="eager"
+            />
+            <!-- legenda opcional para a imagem principal (escondida visualmente, mas acessível) -->
+            <figcaption style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+                Yang Kai — Martial Peak
+            </figcaption>
+        </figure>
+
+        <!-- Miniaturas -->
+        <div class="thumbnails">
+
+            <figure tabindex="0">
+                <img
+                src="F3.jpeg"
+                alt="Arthur Leywin, protagonista de The Beginning After the End, com cabelos loiros e olhar sereno"
+                loading="lazy"
+                />
+                <figcaption>
+                    Arthur Leywin
+                    <small>The Beginning After the End</small>
+                </figcaption>
+            </figure>
+
+            <figure tabindex="0">
+                <img
+                src="F2.jpeg"
+                alt="Kim Dokja, protagonista de Omniscient Reader's Viewpoint, com expressão pensativa e cabelos escuros"
+                loading="lazy"
+                />
+                <figcaption>
+                    Kim Dokja
+                    <small>Omniscient Reader's Viewpoint</small>
+                </figcaption>
+            </figure>
+
+            <figure tabindex="0">
+                <img
+                    class="img-kim"
+                    src="F4.jpeg"
+                    alt="Kim Gong-Ja, protagonista de SSS-Class Revival Hunter, com traços marcantes e postura confiante"
+                    loading="lazy"
+                />
+                <figcaption>
+                    Kim Gong-Ja
+                    <small>SSS-Class Revival Hunter</small>
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </main>
+</body>
+
+</html>
