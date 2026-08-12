@@ -4,18 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aulas</title>
+    <title>Projetos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        min-height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: linear-gradient(145deg, #f1f5f9 0%, #e2e8f0 100%);
+        font-family: 'Inter', -apple-system, sans-serif;;
+    }
+
+    .links {
+        background: rgba(255, 255, 255, 0.9);
+        max-width: 400px;
+        width: 100%;
+        padding: 40px 45px;
+        border-radius: 32px;
+        border: 1px solid gray;
+    }
+
+    .titulo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        padding: 3px;
+        position: relative;
+    }
+
+    li::before {
+        content: "☞";
+        color: cadetblue;
+        position: relative;
+        right: 2px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: blue;
+    }
+</style>
+
 <body>
-    <h1>Minhas Aulas de HTML</h1>
-    <a target="_blank" href="exercicio_links/aula01.html">Aula 01</a><br>
-    <a target="_blank" href="exercicio_links/aula02.html">Aula 02</a><br>
-    <a target="_blank" href="exercicio_links/aula03.html">Aula 03</a><br>
-    <a target="_blank" href="exercicio_links/musica.html">Músicas Favoritas</a><br>
-    <a target="_blank" href="exercicio_links/filme.html">Filmes Favoritos</a><br>
-    <a target="_blank" href="exercicio_links/culinaria.html">Receitas Favoritas</a><br>
-    <a target="_blank" href="exercicio_imagens/images.html">Personagens - Versão Beta</a><br>
-    <a target="_blank" href="exercicio_imagens/images-ia.html">Personagens - Versão Final</a>
+    <div class="links">
+    <h1 class="titulo">Minhas Aulas de HTML</h1>
+
+    <ul>
+        <li><a target="_blank" href="exercicio_links/aula01.html">Aula 01</a></li>
+        <li><a target="_blank" href="exercicio_links/aula02.html">Aula 02</a></li>
+        <li><a target="_blank" href="exercicio_links/aula03.html">Aula 03</a></li>
+        <li><a target="_blank" href="exercicio_links/musica.html">Músicas Favoritas</a></li>
+        <li><a target="_blank" href="exercicio_links/filme.html">Filmes Favoritos</a></li>
+        <li><a target="_blank" href="exercicio_links/culinaria.html">Receitas Favoritas</a></li>
+        <li><a target="_blank" href="exercicio_imagens/images.html">Personagens - Versão Beta</a></li>
+        <li><a target="_blank" href="exercicio_imagens/images-ia.html">Personagens - Versão IA</a></li>
+        <li><a target="_blank" href="pagina_pessoal/personal_page.html">Página Pessoal - Versão Beta</a></li>
+        <li><a target="_blank" href="pagina_pessoal/personal_page_ia.html">Página Pessoal - Versão IA</a></li>
+    </ul>
+    
+    </div>
 </body>
 </html>
