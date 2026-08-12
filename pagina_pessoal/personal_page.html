@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Cassano - Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---------- RESET ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ---------- BASE ---------- */
+        body {
+            background-color: rgb(250, 250, 210);
+            font-family: "Playfair Display", serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* ---------- CARD ---------- */
+        .bio {
+            background-color: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            border: 4px rgb(255, 25, 25) groove;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio h1 {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+        }
+
+        .bio h2 {
+            font-size: 1.3rem;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            padding: 0;
+        }
+
+        .bio p {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        /* ---------- IMAGENS ---------- */
+        .bio>img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 25px;
+            display: block;
+            margin: 0 auto 16px;
+        }
+
+        .logos {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+
+        .logos:hover {
+            transform: scale(1.1);
+        }
+
+        /* ---------- LISTAS ---------- */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+        }
+
+        /* Pequeno marcador personalizado */
+        li::before {
+            content: "✦";
+            color: rgb(255, 25, 25);
+            position: absolute;
+            left: 0;
+        }
+
+        /* ---------- LINKS ---------- */
+        a {
+            text-decoration: none;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+        }
+
+        /* ---------- RESPONSIVO ---------- */
+        @media (max-width: 480px) {
+            .bio {
+                padding: 20px;
+            }
+
+            .bio h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bio">
+        <h1>Olá, eu sou o Gabriel!</h1>
+        <img src="foto.jpg" alt="Foto de Gabriel Cassano">
+
+        <p>
+            Tenho 16 anos, sou estudante de Desenvolvimento de Sistemas e
+            estou no 2º ano do Ensino Médio.
+        </p>
+
+        <h2>Minhas Especialidades</h2>
+        <ul>
+            <li>Páginas Web</li>
+            <li>Linguagem C</li>
+            <li>Cozinhar</li>
+            <li>Matemática</li>
+            <li>Conversar</li>
+        </ul>
+
+        <h2>Meus Hobbies</h2>
+        <ul>
+            <li>Ler Livros</li>
+            <li>Jogar Videogames</li>
+            <li>Descansar</li>
+            <li>Servir na Missa</li>
+        </ul>
+
+        <div class="social-links">
+            <a target="_blank" href="https://github.com/IJCC06" aria-label="GitHub">
+                <img class="logos" src="github.png" alt="GitHub">
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/gabriel-cassano-421565409/" aria-label="LinkedIn">
+                <img class="logos" src="linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
